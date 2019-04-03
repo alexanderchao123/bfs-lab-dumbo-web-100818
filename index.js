@@ -18,10 +18,6 @@ let edges = [
 	  {name: '23rd&Lex', distance: null, predecessor: null}
 	]
 
-function bfs(rootNode, vertices, edges){
-
-}
-
 function checkVertices(predecessor, node, vertices) {
   for(let i = 0; i < vertices.length; i++) {
     let vertex = vertices[i]
@@ -43,4 +39,15 @@ function findAdjacent(node,  vertices, edges) {
     }
   }
   return nodes
+}
+
+function markDistanceAndPredecessor(vertex, adjacentNodes) {
+  for(let i = 0; i < adjacentNodes.length; i++){
+    adjacentNodes[i]["distance"] = 1
+    adjacentNodes[i]["predecessor"] = vertex
+  }
+}
+
+function bfs(rootNode, vertices, edges){
+
 }
