@@ -48,8 +48,11 @@ function markDistanceAndPredecessor(vertex, adjacentNodes) {
 }
 
 function bfs(rootNode, vertices, edges){
+  // set rootNode's distance to zero
   rootNode["distance"] = 0
+  // initialize the array with rootNode
   let discovered = [rootNode]
+  // initialize with the order of the nodes being added
   let discoverOrder = [rootNode]
   while (discovered.length != 0) {
     let currentNode = discovered.shift()
